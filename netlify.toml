@@ -1,0 +1,8 @@
+[build]
+  command = "pnpm build && node scripts/netlify-redirects.js"
+  publish = "dist"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Service-Worker-Allowed = "/"
